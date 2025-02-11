@@ -7,7 +7,7 @@ function App() {
   return (
     <main className="principal">
       <h1 className="principal__titre">SUDOKU</h1>
-   <Ecran></Ecran>
+      <Ecran></Ecran>
     </main>
   );
 }

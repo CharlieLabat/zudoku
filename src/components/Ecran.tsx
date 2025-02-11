@@ -1,9 +1,29 @@
-import React from "react"
+import React from "react";
+import Case from "./Case.tsx";
 
-const Ecran = () =>{
-return <section className="ecran">
-    <p className="ecran__test">Coucou</p>
-</section>
-}
+const Ecran = () => {
+  return (
+    <section className="ecran">
 
-export default Ecran
+      <Case></Case>
+      
+      <Case></Case>
+      
+      <Case></Case>
+      
+      <Case></Case>
+      
+      <Case></Case>
+      
+      <Case></Case>
+      
+      <Case></Case>
+      
+      <Case></Case>
+      
+      <Case></Case>
+    </section>
+  );
+};
+
+export default Ecran;

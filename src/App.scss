@@ -1,5 +1,7 @@
 @import "./styles/reset"; // Retire tout style par défaut des navigateurs
 @import "./styles/base"; // Ajuste le style général
+@import "./styles/grille"; // Style de la grille de Sudoku
+@import "./styles/ecran"; // Style de l'ecran de jeu
 
 body {
   background-color: black;
@@ -9,12 +11,10 @@ body {
   align-items: center;
 }
 .principal{
+  border: 0.1rem solid white;
+  min-width: 25vw;
+  min-height: 100vh;
   &__titre{
     color: green;
-  }
-}
-.ecran{
-  &__test{
-    color: wheat;
   }
 }
