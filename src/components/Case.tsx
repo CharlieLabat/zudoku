@@ -1,17 +1,23 @@
 import React from "react";
 
-const Case = () => {
+interface GrillesProps {
+  sousGrille: Array<number>;
+}
+
+const Case = ({ sousGrille }: GrillesProps) => {
   return (
     <form className="grille">
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
-      <input type="number" name="" id="" className="grille__case" maxLength={1}  />
+      {sousGrille.map((casse, key) => (
+        <input
+          type="number"
+          name=""
+          id={key.toString()}
+          key={key}
+          className="grille__case"
+          maxLength={1}
+          value={casse}
+        />
+      ))}
     </form>
   );
 };
