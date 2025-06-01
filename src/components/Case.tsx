@@ -5,20 +5,18 @@ interface GrillesProps {
 }
 
 const Case = ({ sousGrille }: GrillesProps) => {
-     const [grilleValeur, setGrilleValeur] = useState(0)
-  const handleCase = (e) => {
-
-    setGrilleValeur(e.target.value)
-  }
+  const [grilleValeur, setGrilleValeur] = useState(sousGrille);
+  const handleCases = () => {
+    setGrilleValeur(grilleValeur.map((casse) => casse));
+  };
   return (
     <form className="grille">
       {sousGrille.map((casse, key) => (
         <input
           type="number"
-          name=""
           id={key.toString()}
           key={key}
-          onChange={handleCase}
+          onChange={handleCases}
           className="grille__case"
           maxLength={1}
           value={casse}

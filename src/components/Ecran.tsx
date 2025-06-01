@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Case from "./Case.tsx";
 
 interface EcranProps {
@@ -6,9 +6,8 @@ interface EcranProps {
 }
 
 const Ecran = ({ grilleRef } : EcranProps) => {
-  const handleGrille = () => {
-    
-  }
+
+
   const n = Math.floor(Math.random() * 10);
   const grilleTest = [
     [0, n, n, n, n, n, n, n, n],
