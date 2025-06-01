@@ -1,7 +1,14 @@
 import React from "react";
 import Case from "./Case.tsx";
 
-const Ecran = () => {
+interface EcranProps {
+ grilleRef : Array<Array<number>>
+}
+
+const Ecran = ({ grilleRef } : EcranProps) => {
+  const handleGrille = () => {
+    
+  }
   const n = Math.floor(Math.random() * 10);
   const grilleTest = [
     [0, n, n, n, n, n, n, n, n],
@@ -14,9 +21,10 @@ const Ecran = () => {
     [n, n, n, n, n, n, n, 0, n],
     [n, n, n, n, n, n, n, n, 0],
   ];
+
   return (
     <section className="ecran">
-      {grilleTest.map((grille,key) => (
+      {  grilleRef.map((grille,key) => (
         <Case sousGrille={grille} key={key}></Case>
       ))}
     </section>
