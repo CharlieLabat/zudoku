@@ -21,10 +21,18 @@ const Ecran = ({ grilleRef } : EcranProps) => {
     [n, n, n, n, n, n, n, n, 0],
   ];
 
+
+const agloTest = () => {
+  grilleTest.forEach((casse,ligne) => {
+    
+  })
+}
+
+
   return (
     <section className="ecran">
-      {  grilleRef.map((grille,key) => (
-        <Case sousGrille={grille} key={key}></Case>
+      {  grilleRef.map((grille,ligne) => (
+        <Case sousGrille={grille} key={ligne}></Case>
       ))}
     </section>
   );
