@@ -3,10 +3,10 @@ import React, { useState } from "react";
 interface GrillesProps {
   sousGrille: Array<number>;
 }
-
+// Case : Zone d'un nombre (entre 1 et 9)
 const Case = ({ sousGrille }: GrillesProps) => {
   const [grilleValeur, setGrilleValeur] = useState(sousGrille);
-
+// Controle de la case
   const handleCases = (caseChoisi) => {
     setGrilleValeur(
       grilleValeur.map((casse, key) =>

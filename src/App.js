@@ -4,6 +4,7 @@ import Ecran from "./components/Ecran.tsx";
 
 
 function App() {
+  // Récup de la grille
   const [grille, setGrille] = useState([])
   useEffect(() => {
     fetch("https://sudoku-api.vercel.app/api/dosuku").then(reponse => reponse.json()).then(grilleApi => {
