@@ -19,7 +19,8 @@ const Ecran = ({ grilleRef }: EcranProps) => {
     [n, n, n, 1, n, n, n, 9, n],
     [n, n, n, n, n, n, n, n, 8],
   ];
-
+  const grilleInv = grilleTest.toReversed();
+  console.log(grilleInv);
   const agloTest = () => {
     grilleTest.forEach((casse, ligne) => {
       //console.log(casse);
