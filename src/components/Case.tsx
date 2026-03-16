@@ -17,7 +17,7 @@ const Case = ({ sousGrille }: GrillesProps) => {
     );
   };
   return (
-    <form className="grille">
+    <form className="grille" >
       {grilleValeur.map((casse, key) => (
         <input
           type="number"
