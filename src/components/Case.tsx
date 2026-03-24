@@ -2,22 +2,36 @@ import React, { useState } from "react";
 
 interface GrillesProps {
   sousGrille: Array<number>;
+
+  grillePrincipal: Array<Array<number>>;
+  numLigne: number;
 }
 // Case : Zone d'un nombre (entre 1 et 9)
-const Case = ({ sousGrille }: GrillesProps) => {
+const Case = ({
+  sousGrille,
+
+  grillePrincipal,
+  numLigne,
+}: GrillesProps) => {
   const [grilleValeur, setGrilleValeur] = useState(sousGrille);
-// Controle de la case
-  const handleCases = (caseChoisi) => {
+  
+
+  // Controle de la case
+  const handleCases = (caseChoisi : any) => {
     setGrilleValeur(
       grilleValeur.map((casse, key) =>
         caseChoisi.target.id === key.toString()
           ? (casse = caseChoisi.target.value)
-          : casse
-      )
+          : casse,
+      ),
     );
+
+ 
+    
+
   };
   return (
-    <form className="grille" >
+    <section className="grille">
       {grilleValeur.map((casse, key) => (
         <input
           type="number"
@@ -29,7 +43,7 @@ const Case = ({ sousGrille }: GrillesProps) => {
           value={casse > 0 ? casse : ""}
         />
       ))}
-    </form>
+    </section>
   );
 };
 
