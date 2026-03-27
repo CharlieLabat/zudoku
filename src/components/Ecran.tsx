@@ -7,7 +7,7 @@ interface EcranProps {
 
 const Ecran = ({ grilleRef }: EcranProps) => {
   // Grille de test
- /*  const n = 0;
+   const n = 0;
   const grilleTest = [
     [1, n, n, n, n, n, n, 1, n],
     [n, 2, n, n, n, n, n, n, n],
@@ -19,8 +19,8 @@ const Ecran = ({ grilleRef }: EcranProps) => {
     [n, n, n, 1, n, n, n, 9, n],
     [n, n, n, n, n, n, n, n, 8],
   ];
- */
-
+ const [grilleTestDyn, setGrilleTestDyn] = useState(grilleTest)
+ const [grilleRefDyn, setGrilleRefDyn] = useState(grilleRef)
   
 // Recherche d'occuences : Les trois conditions (ligne, colonne, sous-grille) utilisent cette fonction pour voir l'unicité de la zone
   const nbOccuences = (nombre: number, liste: string | any[]) => {
@@ -71,9 +71,9 @@ const Ecran = ({ grilleRef }: EcranProps) => {
 
 
   return (
-    <form className="ecran">
+    <form className="ecran" >
       {grilleRef.map((grille, ligne) => (
-        <Case sousGrille={grille} key={ligne} numLigne={ligne} grillePrincipal={grilleRef}></Case>
+        <Case sousGrille={grille} key={ligne} numLigne={ligne} grillePrincipal={grilleRefDyn} ></Case>
       ))}
     </form>
   );

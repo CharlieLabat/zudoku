@@ -14,7 +14,6 @@ const Case = ({
   numLigne,
 }: GrillesProps) => {
   const [grilleValeur, setGrilleValeur] = useState(sousGrille);
-  
 
   // Controle de la case
   const handleCases = (caseChoisi : any) => {
@@ -26,7 +25,7 @@ const Case = ({
       ),
     );
 
- 
+ console.log(sousGrille)
     
 
   };
